@@ -1,53 +1,44 @@
 import Image from "next/image";
-import { highlights } from "@/data/home-content";
+import { headline } from "@/data/home-content";
 import { Reveal } from "./reveal";
-import { SectionHeading } from "./section-heading";
 
 export function HighlightsSection() {
   return (
-    <section id="semana" className="section-frame px-0 py-18 sm:py-24">
-      <Reveal>
-        <SectionHeading
-          eyebrow="Destaques da semana"
-          title="Os momentos que fizeram a turma brilhar mais forte"
-          description="Uma leitura rápida, visual e gentil dos capítulos que mais marcaram os dias do Pré-2."
-        />
-      </Reveal>
+    <section className="section-paper-strong relative px-6 py-20 text-[var(--ink)]">
+      <div className="mx-auto max-w-md">
+        <Reveal>
+          <p className="font-display section-title max-w-[18rem] text-[2rem] italic leading-[1.02] tracking-[-0.04em] text-balance">
+            &ldquo;{headline.quote}&rdquo;
+          </p>
+        </Reveal>
 
-      <div className="mt-8 grid gap-4 sm:mt-10 lg:grid-cols-3">
-        {highlights.map((item, index) => (
-          <Reveal key={item.title} delay={index * 0.08}>
-            <article className="story-card group overflow-hidden p-3">
-              <div className="relative overflow-hidden rounded-[1.55rem]">
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${item.tint} opacity-95`}
-                />
-                <div className="relative aspect-[0.98] overflow-hidden rounded-[1.4rem]">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.06]"
-                    sizes="(max-width: 1024px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,24,38,0.04),rgba(15,21,31,0.46))]" />
-                  <div className="absolute left-3 top-3 rounded-full bg-white/84 px-3 py-1.5 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-[#4b5969] backdrop-blur-sm">
-                    {item.icon}
-                  </div>
-                </div>
-              </div>
-
-              <div className="px-2 pb-2 pt-4">
-                <h3 className="font-[family-name:var(--font-display)] text-[1.7rem] leading-[1.02] tracking-[-0.04em] text-[#253043]">
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-[0.96rem] leading-7 text-[var(--muted)]">
-                  {item.description}
-                </p>
-              </div>
-            </article>
+        <div className="relative mt-9">
+          <Reveal delay={0.08}>
+            <div className="relative h-[70svh] overflow-hidden rounded-[4px] soft-float">
+              <Image
+                src={headline.image}
+                alt={headline.title}
+                fill
+                className="object-cover"
+                sizes="100vw"
+              />
+            </div>
           </Reveal>
-        ))}
+
+          <Reveal delay={0.18} className="absolute -bottom-10 left-[-0.35rem] z-10 w-[90%]">
+            <div className="border border-[#ead8bd] bg-[#fffaf1] px-5 py-5 shadow-[0_28px_80px_-28px_rgba(0,0,0,0.26)]">
+              <p className="section-kicker text-[0.64rem] font-bold uppercase tracking-[0.34em]">
+                Manchete
+              </p>
+              <h2 className="font-display section-title mt-3 text-[2.35rem] leading-[0.92] tracking-[-0.055em] text-balance">
+                {headline.title}
+              </h2>
+              <p className="section-copy mt-4 text-[0.92rem] leading-7">
+                {headline.text}
+              </p>
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
   );

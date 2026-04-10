@@ -1,146 +1,139 @@
 export const heroMedia = {
-  image: "/images/hero/photo_2026-04-06_21-23-30.jpg",
+  poster: "/images/hero/photo_2026-04-06_21-23-30.jpg",
+  video:
+    "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
 };
 
-export const highlights = [
-  {
-    title: "Descobertas no jardim",
-    icon: "folhas",
-    description:
-      "Entre cheiros, texturas e pequenas surpresas, a turma explorou o quintal como quem abre um livro cheio de pistas.",
-    image: "/images/highlights/highlight-garden.jpg",
-    tint: "from-[#f5dfb6]/80 via-[#fff7eb]/95 to-white",
-  },
-  {
-    title: "Pintura com mãos curiosas",
-    icon: "cores",
-    description:
-      "Tinta, coragem e muitas risadas transformaram papéis grandes em paisagens cheias de personalidade.",
-    image: "/images/highlights/highlight-painting.jpg",
-    tint: "from-[#f2d6ce]/80 via-[#fff8f4]/95 to-white",
-  },
-  {
-    title: "Roda de histórias",
-    icon: "historia",
-    description:
-      "O momento mais silencioso e mágico da semana teve olhos atentos, perguntas doces e imaginação correndo solta.",
-    image: "/images/highlights/highlight-story-circle.jpg",
-    tint: "from-[#d5e3f6]/80 via-[#f7fbff]/95 to-white",
-  },
-];
+export const headline = {
+  quote: "A semana em que pequenas descobertas viraram memória.",
+  title: "O jardim virou sala, a sala virou mundo.",
+  text:
+    "Entre folhas, tintas e perguntas inesperadas, o Pré-2 viveu uma semana de gestos pequenos e sentimentos muito grandes.",
+  image: "/images/highlights/highlight-test.jpg",
+};
 
 export const timeline = [
   {
     day: "Segunda",
-    title: "A sala acordou devagar, com música e abraços apertados",
+    title: "Chegamos em ação",
     text:
-      "Começamos a semana com uma roda de boas-vindas, canções suaves e conversas sobre o fim de semana. Cada criança trouxe um pedacinho da própria rotina para dentro da turma.",
-    image: "/images/timeline/monday-welcome.jpg",
-    accent: "bg-[#f3ddd2]",
+      "A roda de chegada abriu espaço para contar novidades, escutar amigos e reencontrar a turma com calma.",
+    image: "/images/timeline/monday01.jpg",
+    shape: "aspect-square",
+    align: "self-start",
   },
   {
     day: "Terça",
-    title: "A mesa de arte virou território de experiências",
+    title: "A cor escolheu caminhos",
     text:
-      "Pincéis largos, esponjas e dedos curiosos foram escolhendo caminhos diferentes. O mais bonito foi ver como cada produção revelou gestos muito próprios.",
+      "No ateliê, pincéis e dedos foram experimentando texturas. Cada desenho parecia ter uma voz própria.",
     image: "/images/timeline/tuesday-art-table.jpg",
-    accent: "bg-[#f1e1a8]",
+    shape: "aspect-[4/5]",
+    align: "self-end",
   },
   {
     day: "Quarta",
-    title: "No pátio, o brincar encontrou pistas da natureza",
+    title: "Folhas, sombras e pistas",
     text:
-      "Folhas, sementes e sombras inspiraram observações pequenas e importantes. O grupo investigou com calma, comparou tamanhos e inventou nomes para o que encontrou.",
+      "O pátio virou investigação. A turma comparou sementes, inventou nomes e observou o vento trabalhando.",
     image: "/images/timeline/wednesday-garden.jpg",
-    accent: "bg-[#cfe0c6]",
+    shape: "aspect-square",
+    align: "self-start",
   },
   {
     day: "Quinta",
-    title: "As histórias ganharam voz, gesto e surpresa",
+    title: "A história saiu do livro",
     text:
-      "Depois da leitura, surgiram falas espontâneas, perguntas engraçadas e pequenas interpretações dramáticas que deixaram a roda ainda mais viva.",
+      "Depois da leitura, surgiram vozes, gestos e pequenas cenas que transformaram a roda em teatro.",
     image: "/images/timeline/thursday-stories.jpg",
-    accent: "bg-[#cddcf5]",
+    shape: "aspect-[4/5]",
+    align: "self-end",
   },
   {
     day: "Sexta",
-    title: "Fechamos a semana celebrando conquistas miúdas e gigantes",
+    title: "Guardamos a semana",
     text:
-      "Revisitamos os momentos favoritos, vimos fotos juntos e terminamos com aquela sensação gostosa de semana bem vivida, leve e cheia de afeto.",
+      "Revimos fotos, celebramos conquistas e fechamos o dia com aquela alegria quieta de quem viveu algo bonito.",
     image: "/images/timeline/friday-celebration.jpg",
-    accent: "bg-[#f3c9b7]",
+    shape: "aspect-square",
+    align: "self-start",
   },
 ];
 
 export const gallery = [
   {
-    src: "/images/gallery/gallery-painting.jpg",
-    alt: "Crianças pintando juntas em uma mesa clara.",
-    className: "col-span-2 row-span-2",
+    src: "/images/gallery/gallery01.jpg",
+    alt: "Crianças pintando juntas.",
+    size: "h-[64vh]",
   },
   {
-    src: "/images/gallery/gallery-outdoor.jpg",
-    alt: "Brincadeira ao ar livre em um espaço escolar.",
-    className: "col-span-1 row-span-1",
+    src: "/images/gallery/gallery02.jpg",
+    alt: "Brincadeira ao ar livre.",
+    size: "h-[48vh]",
   },
   {
-    src: "/images/gallery/gallery-reading.jpg",
-    alt: "Momento de leitura e conversa em grupo.",
-    className: "col-span-1 row-span-1",
+    src: "/images/gallery/gallery03.jpg",
+    alt: "Roda de leitura.",
+    size: "h-[58vh]",
   },
   {
-    src: "/images/gallery/gallery-group.jpg",
-    alt: "Crianças reunidas em uma atividade com gestos e alegria.",
-    className: "col-span-1 row-span-2",
+    src: "/images/gallery/gallery04.jpg",
+    alt: "Turma reunida em atividade.",
+    size: "h-[52vh]",
   },
   {
-    src: "/images/gallery/gallery-portrait.jpg",
-    alt: "Retrato delicado de infância em luz suave.",
-    className: "col-span-1 row-span-1",
+    src: "/images/gallery/gallery05.jpg",
+    alt: "Retrato delicado de infância.",
+    size: "h-[62vh]",
   },
   {
-    src: "/images/gallery/gallery-classroom.jpg",
-    alt: "Atividade em sala com expressão e participação.",
-    className: "col-span-2 row-span-1",
+    src: "/images/gallery/gallery06.jpg",
+    alt: "Momento em sala.",
+    size: "h-[46vh]",
   },
 ];
 
 export const videos = [
   {
     title: "Cantiga de chegada",
-    duration: "00:38",
-    image: "/images/videos/video-arrival-song.jpg",
-    description: "Uma abertura doce para começar o dia com confiança e presença.",
+    description: "Um minuto de presença antes da manhã começar.",
+    poster: "/images/videos/video-arrival-song.jpg",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   },
   {
     title: "Ateliê em movimento",
-    duration: "00:52",
-    image: "/images/videos/video-studio-motion.jpg",
-    description: "Gestos, cores e descobertas em uma sequência curtinha e muito viva.",
+    description: "Mãos, cores e pequenas decisões criativas.",
+    poster: "/images/videos/video-studio-motion.jpg",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   },
   {
     title: "Leitura com surpresa",
-    duration: "01:06",
-    image: "/images/videos/video-reading-surprise.jpg",
-    description: "O instante em que a história encontrou perguntas e olhares atentos.",
+    description: "Quando uma história encontra perguntas vivas.",
+    poster: "/images/videos/video-reading-surprise.jpg",
+    src: "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
   },
 ];
 
 export const quotes = [
   {
-    text: "A folha fazia cócega no vento, por isso ela dançou.",
+    text: "A folha dançou porque o vento chamou baixinho.",
     child: "Clara",
   },
   {
-    text: "Eu fiz uma casa azul porque nela cabe a chuva e o abraço.",
+    text: "Minha tinta virou uma casa onde cabe a chuva.",
     child: "Theo",
   },
   {
-    text: "Quando a professora lê baixinho, minha cabeça vê filme.",
+    text: "Quando a história começa, minha cabeça acende.",
     child: "Maitê",
   },
   {
-    text: "A semente dorme na terra até ficar pronta para conversar com o sol.",
+    text: "A semente está dormindo para crescer bonito.",
     child: "Gael",
   },
 ];
+
+export const closing = {
+  image: "/images/gallery/gallery-portrait.jpg",
+  text: "A infância passa rápido. O jornal existe para a gente conseguir voltar.",
+};

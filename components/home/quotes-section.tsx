@@ -1,39 +1,50 @@
+"use client";
+
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { quotes } from "@/data/home-content";
-import { Reveal } from "./reveal";
-import { SectionHeading } from "./section-heading";
 
 export function QuotesSection() {
-  return (
-    <section className="section-frame py-18 sm:py-24">
-      <Reveal>
-        <SectionHeading
-          eyebrow="Falas da turma"
-          title="Frases pequenas que guardam mundos inteiros"
-          description="Esse é o pedaço mais afetivo do jornal: observações espontâneas, imaginativas e profundamente memoráveis."
-          align="center"
-        />
-      </Reveal>
+  const [index, setIndex] = useState(0);
+  const quote = quotes[index];
 
-      <div className="mt-8 grid gap-4 lg:grid-cols-2">
-        {quotes.map((quote, index) => (
-          <Reveal key={quote.child} delay={index * 0.08}>
-            <article className="story-card relative overflow-hidden p-6 sm:p-7">
-              <div className="ambient-blur right-0 top-0 h-24 w-24 bg-[#d4e2f6]" />
-              <div className="ambient-blur bottom-0 left-0 h-24 w-24 bg-[#f5d6c9]" />
-              <div className="relative">
-                <div className="font-[family-name:var(--font-display)] text-[3.5rem] leading-none tracking-[-0.08em] text-[#d0b08b]">
-                  &ldquo;
-                </div>
-                <p className="-mt-4 text-[1.16rem] leading-8 text-[#334051]">
-                  {quote.text}
-                </p>
-                <div className="mt-5 inline-flex rounded-full border border-[var(--line)] bg-white/72 px-4 py-2 text-[0.76rem] font-semibold uppercase tracking-[0.18em] text-[#5b6878]">
-                  {quote.child}
-                </div>
-              </div>
-            </article>
-          </Reveal>
-        ))}
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setIndex((current) => (current + 1) % quotes.length);
+    }, 4000);
+
+    return () => window.clearInterval(timer);
+  }, []);
+
+  return (
+    <section className="relative min-h-[60svh] overflow-hidden bg-[#9f4b2c] px-5 py-16 text-[#fff8e9]">
+      <div className="absolute -left-10 top-8 h-40 w-40 rounded-full bg-[#e4b06d]/20 blur-3xl" />
+      <div className="absolute -right-16 bottom-0 h-52 w-52 rounded-full bg-[#6c3d2c]/20 blur-3xl" />
+
+      <div className="relative mx-auto flex min-h-[48svh] max-w-md flex-col justify-center">
+        <p className="text-[0.66rem] font-bold uppercase tracking-[0.38em] text-white/82">
+          Vozes da turma
+        </p>
+
+        <div className="relative mt-8 min-h-[16rem]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={quote.text}
+              initial={{ opacity: 0, y: 18, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              exit={{ opacity: 0, y: -18, filter: "blur(6px)" }}
+              transition={{ type: "spring", stiffness: 42, damping: 22 }}
+              className="absolute inset-0"
+            >
+              <p className="font-hand text-[4.6rem] leading-[0.72] tracking-[-0.045em] text-[#fff8e9] drop-shadow-[0_8px_24px_rgba(60,24,14,0.24)]">
+                {quote.text}
+              </p>
+              <p className="mt-8 text-right text-[0.7rem] font-bold uppercase tracking-[0.36em] text-white/82">
+                {quote.child}
+              </p>
+            </motion.div>
+          </AnimatePresence>
+        </div>
       </div>
     </section>
   );

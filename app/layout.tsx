@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Fraunces, Manrope } from "next/font/google";
+import { Caveat, Manrope, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
-const fraunces = Fraunces({
+const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-display",
 });
@@ -10,6 +10,11 @@ const fraunces = Fraunces({
 const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-body",
+});
+
+const caveat = Caveat({
+  subsets: ["latin"],
+  variable: "--font-hand",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${fraunces.variable} ${manrope.variable} bg-[var(--background)] font-[family-name:var(--font-body)] text-[var(--foreground)] antialiased`}
+        className={`${playfair.variable} ${manrope.variable} ${caveat.variable} bg-[var(--background)] font-[family-name:var(--font-body)] text-[var(--ink)] antialiased`}
       >
         {children}
       </body>

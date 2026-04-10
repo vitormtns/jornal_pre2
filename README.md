@@ -1,6 +1,6 @@
-# Jornal do Pre-2
+# Jornal do Pré-2
 
-Homepage editorial mobile-first para funcionar como um jornal digital da turma do Pre-2, feita com `Next.js`, `TypeScript`, `Tailwind CSS` e `Framer Motion`.
+Homepage editorial mobile-first para funcionar como um jornal digital da turma do Pré-2, feita com `Next.js`, `TypeScript`, `Tailwind CSS` e `Framer Motion`.
 
 ## Rodando localmente
 
@@ -22,7 +22,7 @@ npm run lint
 
 ## Onde editar
 
-- Conteudos e caminhos das imagens: `data/home-content.ts`
+- Conteúdos e caminhos das imagens: `data/home-content.ts`
 - Hero: `components/home/hero-section.tsx`
 - Estilos globais: `app/globals.css`
 - Imagens locais: `public/images`
@@ -36,9 +36,9 @@ data/
 public/images/
 ```
 
-## Publicacao
+## Publicação
 
-Este projeto esta pronto para ser publicado em plataformas como Vercel.
+Este projeto está pronto para ser publicado em plataformas como Vercel.
 
 ### Subir para GitHub
 
@@ -47,19 +47,19 @@ git init
 git add .
 git commit -m "feat: initial project"
 git branch -M main
-git remote add origin <url-do-repositorio>
+git remote add origin <url-do-repositório>
 git push -u origin main
 ```
 
 ### Deploy na Vercel
 
-1. Importe o repositorio no painel da Vercel.
+1. Importe o repositório no painel da Vercel.
 2. A Vercel detecta `Next.js` automaticamente.
-3. Use os comandos padrao:
+3. Use os comandos padrão:
    - Build command: `npm run build`
-   - Output: padrao do Next.js
+   - Output: padrão do Next.js
 
-## Observacoes
+## Observações
 
-- O `.gitignore` ja evita subir `node_modules`, `.next` e arquivos locais de ambiente.
-- Se voce trocar nomes de imagens em `public/images`, atualize os caminhos em `data/home-content.ts`.
+- O `.gitignore` já evita subir `node_modules`, `.next` e arquivos locais de ambiente.
+- Se você trocar nomes de imagens em `public/images`, atualize os caminhos em `data/home-content.ts`.

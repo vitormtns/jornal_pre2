@@ -2,7 +2,7 @@
   "name": "jornal-pre-2",
   "version": "1.0.0",
   "private": true,
-  "description": "Landing page editorial mobile-first para o jornal digital da turma do Pre-2.",
+  "description": "Landing page editorial mobile-first para o jornal digital da turma do Pré-2.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
